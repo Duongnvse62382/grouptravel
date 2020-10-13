@@ -1,0 +1,140 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.fpt.gta"
+        minSdkVersion defaultMinSdkVersion
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        resConfigs "vn"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+//    signingConfigs {
+//        release {
+//            storeFile file(RELEASE_STORE_FILE)
+//            storePassword RELEASE_STORE_PASSWORD
+//            keyAlias RELEASE_KEY_ALIAS
+//            keyPassword RELEASE_KEY_PASSWORD
+//
+//            // Optional, specify signing versions used
+//            v1SigningEnabled true
+//            v2SigningEnabled true
+//        }
+//    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+
+}
+
+dependencies {
+    //sectjon
+    implementation 'com.akexorcist:round-corner-progress-bar:2.1.1'
+
+
+    implementation 'es.voghdev.pdfviewpager:library:1.1.2'
+    implementation 'com.karumi:dexter:6.2.1'
+    implementation 'com.shuhart.stickyheader:stickyheader:1.0.6'
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+    implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
+    implementation 'com.firebaseui:firebase-ui-firestore:6.2.1'
+    implementation 'com.firebaseui:firebase-ui-auth:6.2.1'
+    implementation 'com.firebaseui:firebase-ui-database:6.2.1'
+    implementation 'com.firebaseui:firebase-ui-storage:6.2.1'
+    implementation "androidx.paging:paging-runtime:2.1.2" // For Kotlin use paging-runtime-ktx
+    implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
+    implementation 'com.github.nikartm:image-support:1.0.5'
+
+    implementation 'com.google.firebase:firebase-core:16.0.7'       //Analytics
+    implementation 'com.google.firebase:firebase-auth:16.1.0'       //Authentication
+    implementation 'com.google.firebase:firebase-firestore:18.1.0'  //Cloud Firestore
+    implementation 'com.google.firebase:firebase-storage:16.1.0'    //Storage
+    //Firebase
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.firebase:firebase-analytics:16.3.0'
+    implementation 'com.google.firebase:firebase-dynamic-links:19.1.0'
+    implementation 'com.google.firebase:firebase-auth:19.3.1'
+    implementation 'com.firebaseui:firebase-ui-auth:6.2.1'
+    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+    implementation 'com.google.firebase:firebase-messaging:20.2.3'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.kaopiz:kprogresshud:1.2.0'
+
+    //Smart tab
+    implementation 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    implementation 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+
+    //material
+    implementation 'com.google.android.material:material:1.2.1'
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.5'
+    implementation 'androidx.room:room-runtime:2.1.0'
+    implementation 'com.google.firebase:firebase-database:19.3.1'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    annotationProcessor 'androidx.room:room-compiler:2.1.0'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0'
+
+    //lombok
+    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
+    //image
+    implementation 'com.github.esafirm:android-image-picker:2.3.1'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.github.myinnos:AlphabetIndex-Fast-Scroll-RecyclerView:1.0.95'
+
+
+    implementation 'com.google.firebase:firebase-ml-vision:24.0.3'
+    implementation 'com.google.firebase:firebase-ml-model-interpreter:22.0.3'
+
+    //LOAD IMGAE
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //Goople API
+    implementation 'com.google.android.libraries.places:places:2.3.0'
+
+    //testing
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //commons lang
+    implementation 'org.apache.commons:commons-lang3:3.6'
+
+    //joda time
+    implementation 'joda-time:joda-time:2.10.6'
+}

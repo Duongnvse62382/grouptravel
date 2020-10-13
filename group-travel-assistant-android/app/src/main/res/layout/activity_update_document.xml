@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.manageplan.updateactivity.UpdateActivityDocumentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorBackGround"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Update Activity"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="left|center">
+
+                    <ImageView
+                        android:id="@+id/imgAddUpdateActivityBack"
+                        android:layout_width="23dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/iconback" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_weight="9"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true">
+            <LinearLayout
+                android:weightSum="10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:weightSum="10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:orientation="vertical">
+                            <TextView
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:text="Activity Type"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:gravity="center"
+                                android:focusable="false"
+                                android:id="@+id/edtUpdateActivityType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:hint="Choose Activity Type"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_width="0dp"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5">
+                            <TextView
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:text="Add Document"
+                                android:textSize="15sp" />
+
+                            <ImageView
+                                android:id="@+id/imgUpdateActivityDocument"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:src="@mipmap/document"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/edtUpdateActivityName"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:focusable="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="Activity Name"
+                        android:textSize="15sp" />
+
+
+                    <EditText
+                        android:id="@+id/edtUpdateActivityStartLocationName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="Start Place Name"
+                        android:focusable="false"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/edtUpdateStartPlaceActivityAddress"
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="Start Place Address"
+                        android:textSize="15sp" />
+                    <LinearLayout
+                        android:id="@+id/lnlAddPlaceActivity"
+                        android:gravity="center|right"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        >
+                        <ImageView
+                            android:id="@+id/imgAddActivityPlace"
+                            android:layout_margin="@dimen/dp10"
+                            android:src="@mipmap/addplace"
+                            android:layout_width="@dimen/dp50"
+                            android:layout_height="@dimen/dp30"/>
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/edtUpdateActivityEndLocationName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="End Place Name"
+                        android:focusable="false"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/edtUpdateEndActivityAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:enabled="false"
+                        android:hint="End Place Address"
+                        android:focusable="false"
+                        android:textSize="15sp" />
+                    <LinearLayout
+                        android:id="@+id/lnlSubPlaceActivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center|right">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:id="@+id/imgSubActivityPlace"
+                            android:layout_margin="@dimen/dp10"
+                            android:src="@mipmap/subplace"
+                            android:layout_width="@dimen/dp50"
+                            android:layout_height="25dp"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:text="Start Day"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/edtUpdateActivityStartDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:focusable="false"
+                                android:hint="Start Day"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:text="Start Time"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/edtUpdateActivityStartTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:focusable="false"
+                                android:layout_marginRight="5dp"
+                                android:hint="Start Time"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:text="End Day"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/edtUpdateActivityEndDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:focusable="false"
+                                android:hint="End Day"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:text="End Time"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/edtUpdateActivityEndTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:focusable="false"
+                                android:hint="End Time"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                    <Button
+                        android:layout_margin="16dp"
+                        android:id="@+id/btnUpdateActivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Save"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/shapebutton"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

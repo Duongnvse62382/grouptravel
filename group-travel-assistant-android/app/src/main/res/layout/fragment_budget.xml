@@ -1,0 +1,1702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.managebudget.BudgetFragment">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="right|center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
+           <LinearLayout
+               android:layout_marginLeft="16dp"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="3"
+               android:gravity="left">
+
+               <ImageView
+                   android:id="@+id/imgRefreshBudget"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@mipmap/refresh" />
+           </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"/>
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="30dp"
+               android:weightSum="10"
+               android:layout_weight="5"
+               android:gravity="right">
+               <CheckBox
+                   android:id="@+id/chkEditBudget"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/colorBackGround"
+                   android:textSize="15sp"
+                   android:textStyle="bold" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Edit Budget"
+                   android:textColor="@color/colorBackGround"
+                   android:textStyle="bold" />
+           </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/lnlGroupBudget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+
+                android:background="@drawable/shapenopading"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Budget Group"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="50dp"
+                            android:src="@mipmap/category" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:gravity="center"
+                            android:text="Group Budget Activity"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtBudgetGroupActivity"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="5dp"
+
+                            android:hint="0"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txtCurrencyPerPax"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="50dp"
+                            android:src="@mipmap/accomodation" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Group Budget Accommodation"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtBudgetGroupAccommodation"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="5dp"
+
+                            android:hint="0"
+                            android:inputType="numberDecimal"
+
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txtCurrencyPerPax2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="50dp"
+                            android:src="@mipmap/transaportationicon" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Group Budget Transportation"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtBudgetGroupTransportation"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="5dp"
+
+                            android:hint="0"
+                            android:inputType="numberDecimal"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txtCurrencyPerPax3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="50dp"
+                            android:src="@mipmap/fastfood" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Group Budget Food And Beverage"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtBudgetGroupFood"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="5dp"
+                            android:hint="0"
+                            android:inputType="numberDecimal"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txtCurrencyPerPax4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btnSubmitGroupBudget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:background="@drawable/shapebutton"
+                            android:text="Submit"
+                            android:textColor="@color/ef_white" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnlMyBudget"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shapenopading"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="My Budget"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="50dp"
+                            android:src="@mipmap/category" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:gravity="center"
+                            android:text="My Budget Activity"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtBudgetIndividualActivity"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="5dp"
+
+                            android:hint="0"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txtCurrencyIndividualActivity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="50dp"
+                            android:src="@mipmap/accomodation" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="My Budget Accomodation"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtBudgetIndividualAccommodation"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="5dp"
+
+                            android:hint="0"
+                            android:inputType="numberDecimal"
+
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txtCurrencyIndividualAccommodation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="50dp"
+                            android:src="@mipmap/transaportationicon" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="My Budget Transportation"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtBudgetIndividualTransportation"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="5dp"
+
+                            android:hint="0"
+                            android:inputType="numberDecimal"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txtCurrencyIndividualTransportation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="50dp"
+                            android:src="@mipmap/fastfood" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="My Budget Food And Beverage"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtBudgetIndividualFood"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="5dp"
+                            android:hint="0"
+                            android:inputType="numberDecimal"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txtCurrencyIndividualFood"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btnSubmitMyBudget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:background="@drawable/shapebutton"
+                            android:text="Submit"
+                            android:textColor="@color/ef_white" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/shapenopading"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+                        <TextView
+                            style="@style/Text.Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Group Actual Cost"
+                            android:textColor="@color/colorBackGround"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtGroupActualCost"
+                            style="@style/Text.Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:textColor="@color/colorRed"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlActivityBudget"
+                        style="@style/SampleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/txtBudgetGroupActivityFinallyPlan"
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="7"
+                                android:maxLines="1"
+                                android:text="Group Activity Budget"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtBudgetGroupActivityOverload"
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/colorRed"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+                            android:id="@+id/progressBarGroupActivity"
+                            style="@style/SampleProgress.Icon"
+                            android:layout_width="match_parent"
+                            app:rcBackgroundColor="@color/colorTedarari"
+                            app:rcBackgroundPadding="2dp"
+                            app:rcIconPadding="5dp"
+                            app:rcIconSize="20dp"
+                            app:rcIconSrc="@mipmap/category"
+                            app:rcProgressColor="@color/colorYellowBudget"
+                            app:rcRadius="5dp" />
+
+                        <TextView
+                            android:id="@+id/txtValueGroupActivityProcess"
+                            style="@style/Text.Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="right"
+                            android:text="0"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlAccommodationBudget"
+                        style="@style/SampleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="7"
+                                android:maxLines="1"
+                                android:text="Group Accommodation Budget"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtBudgetGroupAccommodationOverload"
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/colorRed"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+                            android:id="@+id/progressBarGroupAccommodation"
+                            style="@style/SampleProgress.Icon"
+                            android:layout_width="match_parent"
+                            app:rcBackgroundColor="@color/colorTedarari"
+                            app:rcBackgroundPadding="2dp"
+                            app:rcIconPadding="5dp"
+
+                            app:rcIconSize="20dp"
+                            app:rcIconSrc="@mipmap/accomodation"
+                            app:rcProgressColor="@color/colorOrange"
+                            app:rcRadius="5dp" />
+
+                        <TextView
+                            android:id="@+id/txtValueGroupAccommodationProcess"
+                            style="@style/Text.Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="right"
+                            android:text="0"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlTransportationBudget"
+                        style="@style/SampleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="7"
+                                android:maxLines="1"
+                                android:text="Group Transportation Budget"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtBudgetGroupTransportationOverload"
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/colorRed"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+
+                        <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+                            android:id="@+id/progressBarGroupTransportation"
+                            style="@style/SampleProgress.Icon"
+                            android:layout_width="match_parent"
+                            app:rcBackgroundColor="@color/colorTedarari"
+                            app:rcBackgroundPadding="2dp"
+                            app:rcIconPadding="5dp"
+
+                            app:rcIconSize="20dp"
+                            app:rcIconSrc="@mipmap/transaportationicon"
+                            app:rcProgressColor="@color/colorAccent"
+                            app:rcRadius="5dp" />
+
+                        <TextView
+                            android:id="@+id/txtValueGroupTransportationProcess"
+                            style="@style/Text.Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+
+                            android:layout_marginEnd="5dp"
+                            android:gravity="right"
+                            android:text="0"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlFoodBudget"
+                        style="@style/SampleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="7"
+                                android:maxLines="1"
+                                android:text="Group Food Budget"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtBudgetGroupFoodOverload"
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/colorRed"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+
+                        <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+                            android:id="@+id/progressBarGroupFood"
+                            style="@style/SampleProgress.Icon"
+                            android:layout_width="match_parent"
+                            app:rcBackgroundColor="@color/colorTedarari"
+                            app:rcBackgroundPadding="2dp"
+                            app:rcIconPadding="5dp"
+                            app:rcIconSize="20dp"
+
+                            app:rcIconSrc="@mipmap/fastfood"
+                            app:rcProgressColor="@color/colorPurple"
+                            app:rcRadius="5dp" />
+
+                        <TextView
+                            android:id="@+id/txtValueGroupFoodProcess"
+                            style="@style/Text.Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+
+                            android:layout_marginEnd="5dp"
+                            android:gravity="right"
+                            android:text="0"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shapenopading"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+                        <TextView
+                            style="@style/Text.Description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Actual Cost Per Pax"
+                            android:textColor="@color/colorBackGround"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtActualCostPerPax"
+                            style="@style/Text.Description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:textColor="@color/colorRed"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlPerPaxActivityBudget"
+                        style="@style/SampleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="7"
+                                android:maxLines="1"
+                                android:text="Activity Budget Per Pax"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtBudgetPerPaxActivityOverload"
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/colorRed"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+                            android:id="@+id/progressBarPerPaxActivity"
+                            style="@style/SampleProgress.Icon"
+                            android:layout_width="match_parent"
+                            app:rcBackgroundColor="@color/colorTedarari"
+                            app:rcBackgroundPadding="2dp"
+                            app:rcIconPadding="5dp"
+                            app:rcIconSize="20dp"
+
+                            app:rcIconSrc="@mipmap/category"
+                            app:rcProgressColor="@color/colorYellowBudget"
+                            app:rcRadius="5dp" />
+
+                        <TextView
+                            android:id="@+id/txtValuePerPaxActivityProcess"
+                            style="@style/Text.Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="right"
+                            android:text="0"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlAccommodationBudgetPerPax"
+                        style="@style/SampleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="7"
+                                android:maxLines="1"
+                                android:text="Accommodation Budget Per Pax"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtBudgetPerPaxAccommodationOverload"
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/colorRed"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+                            android:id="@+id/progressBarPerPaxAccommodation"
+                            style="@style/SampleProgress.Icon"
+                            android:layout_width="match_parent"
+                            app:rcBackgroundColor="@color/colorTedarari"
+                            app:rcBackgroundPadding="2dp"
+                            app:rcIconPadding="5dp"
+                            app:rcIconSize="20dp"
+
+                            app:rcIconSrc="@mipmap/accomodation"
+                            app:rcProgressColor="@color/colorOrange"
+                            app:rcRadius="5dp" />
+
+                        <TextView
+                            android:id="@+id/txtValuePerPaxAccommodationProcess"
+                            style="@style/Text.Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="right"
+                            android:text="0"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlTransportationBudgetPerPax"
+                        style="@style/SampleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="7"
+                                android:maxLines="1"
+                                android:text="Transportation Budget Per Pax"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtBudgePerPaxTransportationOverload"
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/colorRed"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+                            android:id="@+id/progressBarPerPaxTransportation"
+                            style="@style/SampleProgress.Icon"
+                            android:layout_width="match_parent"
+                            app:rcBackgroundColor="@color/colorTedarari"
+                            app:rcBackgroundPadding="2dp"
+                            app:rcIconPadding="5dp"
+                            app:rcIconSize="20dp"
+                            app:rcIconSrc="@mipmap/transaportationicon"
+                            app:rcProgressColor="@color/colorAccent"
+                            app:rcRadius="5dp" />
+
+                        <TextView
+                            android:id="@+id/txtValuePerPaxTransportationProcess"
+                            style="@style/Text.Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="right"
+                            android:text="0"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlFoodBudgetPerPax"
+                        style="@style/SampleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="7"
+                                android:maxLines="1"
+                                android:text="Food Budget Per Pax"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtBudgetPerPaxFoodOverload"
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/colorRed"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+
+                        <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+                            android:id="@+id/progressBarPerPaxFood"
+                            style="@style/SampleProgress.Icon"
+                            android:layout_width="match_parent"
+                            app:rcBackgroundColor="@color/colorTedarari"
+                            app:rcBackgroundPadding="2dp"
+                            app:rcIconPadding="5dp"
+                            app:rcIconSize="20dp"
+                            app:rcIconSrc="@mipmap/fastfood"
+
+                            app:rcProgressColor="@color/colorPurple"
+                            app:rcRadius="5dp" />
+
+                        <TextView
+                            android:id="@+id/txtValuePerPaxFoodProcess"
+                            style="@style/Text.Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="right"
+                            android:text="0"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shapenopading"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+                        <TextView
+
+                            style="@style/Text.Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="My Individual Actual Cost"
+                            android:textColor="@color/colorBackGround"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtMyIndividualActualCost"
+                            style="@style/Text.Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:textColor="@color/colorRed"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlMyIndividualActivityBudget"
+                        style="@style/SampleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="7"
+                                android:maxLines="1"
+                                android:text="My Activity Budget"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtBudgetMyIndividualActivityOverload"
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/colorRed"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+                            android:id="@+id/progressBarMyIndividualActivity"
+                            style="@style/SampleProgress.Icon"
+                            android:layout_width="match_parent"
+                            app:rcBackgroundColor="@color/colorTedarari"
+                            app:rcBackgroundPadding="2dp"
+                            app:rcIconPadding="5dp"
+                            app:rcIconSize="20dp"
+
+                            app:rcIconSrc="@mipmap/category"
+                            app:rcProgressColor="@color/colorYellowBudget"
+                            app:rcRadius="5dp" />
+
+                        <TextView
+                            android:id="@+id/txtValueIndividualActivityProcess"
+                            style="@style/Text.Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="right"
+                            android:text="0"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlMyIndividualAccommodationBudget"
+                        style="@style/SampleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="7"
+                                android:maxLines="1"
+                                android:text="My Accommodation Budget"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtBudgetMyIndividualAccommodationOverload"
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/colorRed"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+                            android:id="@+id/progressBarMyIndividualAccommodation"
+                            style="@style/SampleProgress.Icon"
+                            android:layout_width="match_parent"
+                            app:rcBackgroundColor="@color/colorTedarari"
+                            app:rcBackgroundPadding="2dp"
+                            app:rcIconPadding="5dp"
+                            app:rcIconSize="20dp"
+
+                            app:rcIconSrc="@mipmap/accomodation"
+                            app:rcProgressColor="@color/colorOrange"
+                            app:rcRadius="5dp" />
+
+                        <TextView
+                            android:id="@+id/txtValueIndividualAccommodationProcess"
+                            style="@style/Text.Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="right"
+                            android:text="0"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlMyIndividualTransportationBudget"
+                        style="@style/SampleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="7"
+                                android:maxLines="1"
+                                android:text="My Transportation Budget"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtBudgetMyIndividualTransportationOverload"
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/colorRed"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+                            android:id="@+id/progressBarMyIndividualTransportation"
+                            style="@style/SampleProgress.Icon"
+                            android:layout_width="match_parent"
+                            app:rcBackgroundColor="@color/colorTedarari"
+                            app:rcBackgroundPadding="2dp"
+                            app:rcIconPadding="5dp"
+                            app:rcIconSize="20dp"
+                            app:rcIconSrc="@mipmap/transaportationicon"
+                            app:rcProgressColor="@color/colorAccent"
+                            app:rcRadius="5dp" />
+
+                        <TextView
+                            android:id="@+id/txtValueIndividualTransportationProcess"
+                            style="@style/Text.Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="right"
+                            android:text="0"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlMyIndividualFoodBudget"
+                        style="@style/SampleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="7"
+                                android:maxLines="1"
+                                android:text="My Food Budget"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtBudgetMyIndividualFoodOverload"
+                                style="@style/Text.Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/colorRed"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+
+                        <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+                            android:id="@+id/progressBarMyIndividualFood"
+                            style="@style/SampleProgress.Icon"
+                            android:layout_width="match_parent"
+                            app:rcBackgroundColor="@color/colorTedarari"
+                            app:rcBackgroundPadding="2dp"
+                            app:rcIconPadding="5dp"
+                            app:rcIconSize="20dp"
+                            app:rcIconSrc="@mipmap/fastfood"
+
+                            app:rcProgressColor="@color/colorPurple"
+                            app:rcRadius="5dp" />
+
+                        <TextView
+                            android:id="@+id/txtValueIndividualFoodProcess"
+                            style="@style/Text.Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="right"
+                            android:text="0"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

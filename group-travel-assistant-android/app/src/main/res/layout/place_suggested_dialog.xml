@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lnlPlaceSuggestedDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shapenopading"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_margin="7dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/txtNamePlaceLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nha Trang"
+                android:textColor="@color/colorBackGround"
+                android:textSize="15sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_weight="4.5"
+                android:id="@+id/cvImgPlaceStart"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="5dp"
+                app:cardCornerRadius="@dimen/dp10">
+
+                <ImageView
+                    android:id="@+id/imgSuggestedPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:textColor="@color/colorSecondary" />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/txtPlaceSuggestedAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="nha trang , khanh hoa, viet nam"
+                android:textColor="@color/colorBackGround"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:id="@+id/chbPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorBackGround"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/dialogTotalAmount"
+            android:layout_width="0dp"
+            android:hint="Input Amount"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColorHint="@color/colorWhite"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="CHANGE"
+            android:id="@+id/dialog_button_AmountOK"
+            android:layout_marginRight="@dimen/dp30"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Close"
+            android:id="@+id/dialog_button_close_Amount"
+            android:layout_marginRight="@dimen/dp30"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

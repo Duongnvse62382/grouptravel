@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fpt.gta">
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:configChanges="orientation|screenSize|keyboardHidden"
+        android:icon="@mipmap/iconapp"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/iconapp"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".feature.manageplan.updateactivity.UpdateActivityDocumentActivity"></activity>
+        <activity android:name=".feature.managebudget.ConfirmBudgetGroupActivity" />
+        <activity android:name=".feature.manageplan.updateactivity.UpdateAccomodationActivity" />
+        <activity android:name=".feature.manageplan.addactivity.AddAccomodationActivity" />
+        <activity android:name=".feature.notifyactivity.ActivityNotifyActivity" />
+        <activity android:name=".feature.managetrip.userjoin.ActivityDetailViewUserActivity" />
+        <activity android:name=".feature.managetrip.userjoin.PlanDetailUserVewActivity" />
+        <activity android:name=".feature.managetrip.userjoin.UserJoinActivity" />
+        <activity
+            android:name=".feature.managebudget.BudgetDetailsActivity"
+            android:label="@string/title_activity_budget_details" />
+        <activity android:name=".feature.managetask.TaskOverviewActivity" />
+        <activity
+            android:name=".feature.manageplan.plansuggested.CalculatedPlaceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.manageplan.updateactivity.UpdateTransportationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.manageplan.addactivity.AddTransportationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managetransaction.addtransaction.OCRTransaction.OcrTransactionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.manageplan.plansuggested.PlanSuggestedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managetransaction.edittransaction.CurrencyActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ReloadActivity" />
+        <activity
+            android:name=".feature.manageplan.documentactivity.DocumenGroupMergeToActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managetransaction.edittransaction.EditGroupDocumentToTransactionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managetransaction.addtransaction.AddGroupDocumentToTransactionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.manageplan.documentactivity.ActivityDocumentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managetransaction.edittransaction.EditTransactionDocumentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managetransaction.edittransaction.EditTransactionOpenFileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managetransaction.addtransaction.AddTransactionDocumentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managetodolist.updatetask.UpdateTaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.manageplan.activitydetails.ActivityDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managetodolist.addtodolist.AddTodoListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managegroup.documentgroup.ImageOpenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managegroup.documentgroup.PdfViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managegroup.documentgroup.DocumentGroupManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managetrip.map.MapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.chatgroup.ChatGroupActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.searchautocomplete.PlaceAutoCompleteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managetransaction.addtransaction.AddTransactionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managetransaction.edittransaction.EditTransactionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.manageplan.updateactivity.UpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.manageplan.addactivity.AddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.manageplan.plandetails.PlanDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managetransaction.transactiondetails.TransactionDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managesuggestedactivity.editsuggestedactivity.EditSuggestedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managemember.MemberOverviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managesuggestedactivity.detailsuggestedactivity.DetailSuggestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managesuggestedactivity.addsuggestedactivity.AddSuggestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managesuggestedactivity.overviewsuggestedactivity.SuggestAndVoteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managetrip.edittrip.EditTripActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managegroup.editgroup.EditGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managegroup.addgroup.AddGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managegroup.overviewgroup.GroupOverViewActivity"
+            android:label="@string/title_activity_group_manage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managetrip.addtrip.CreateTripActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.managetrip.overviewtrip.TripOverviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.authentication.AuthenticationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <receiver android:name=".service.NotificationService" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.fpt.gta.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+        <meta-data
+            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+            android:value="ocr" />
+
+        <service
+            android:name=".service.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

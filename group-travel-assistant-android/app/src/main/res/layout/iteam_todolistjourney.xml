@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/newshape"
+    >
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:id="@+id/lnlRowToDoList"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:weightSum="10"
+            android:layout_margin="@dimen/dp10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:gravity="center"
+                android:id="@+id/cbMemberDone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:button="@drawable/checkbox_custom" />
+
+            <TextView
+                android:paddingLeft="5dp"
+                android:gravity="center|left"
+                android:layout_weight="6.2"
+                android:id="@+id/txtNameWork"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Mang Kem đánh răng" />
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.8">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleViewTaskMember"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="@dimen/dp10"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/colorBackGround"
+                android:text=""
+                android:id="@+id/txtInPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

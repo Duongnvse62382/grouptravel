@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.managetrip.addtrip.CreateTripActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorBackGround"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Add City"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="left|center">
+
+                    <ImageView
+                        android:id="@+id/imgBack"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:src="@drawable/iconback" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="right|center">
+
+                    <ImageView
+                        android:id="@+id/imgAddCitySubmit"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/savebutton"
+                        android:tint="@color/colorWhite" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:background="@color/colorBackGround">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/dp20"
+                        android:paddingTop="7dp"
+                        android:text="Choose Place For This City"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shapebutton"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@mipmap/locationplace"
+                        android:tint="@color/colorWhite" />
+
+
+                    <EditText
+                        android:id="@+id/editSearch"
+                        android:name="com.google.android.libraries.places.widget."
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="9"
+                        android:backgroundTint="@color/colorBackGround"
+                        android:editable="false"
+                        android:hint="Choose Place"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="@dimen/dp12" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnlSearchResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_weight="2.25"
+                    android:background="@drawable/newshape"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="4">
+
+                        <ImageView
+                            android:id="@+id/imgTripImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="6"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="20dp">
+
+                        <TextView
+                            android:id="@+id/txtPlace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phú Quốc"
+                            android:textColor="@color/colorBackGround"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtPlaceTripAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/colorBackGround"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/txtTimeTrip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/colorBackGround"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:id="@+id/txtTimeZone"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2"
+                        android:paddingTop="25dp"
+                        android:text="Time form City:"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/newshape"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:id="@+id/lnlDateStart"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/txtCreateDateStart"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Day Start"
+                                android:textColor="@color/colorBackGround"
+                                android:textColorHint="@color/colorBackGround"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnlTimeStart"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/txtCreateTimeStart"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorBackGround"
+                                android:textColorHint="@color/colorBackGround"
+                                android:text="Time Start"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.5"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/imDateGo"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/calendar" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/newshape"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:id="@+id/lnlDateEnd"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/txtCreateDateEnd"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Day End"
+                                android:textColor="@color/colorBackGround"
+                                android:textColorHint="@color/colorBackGround"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnlTimeEnd"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/txtCreateTimeEnd"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Time End"
+                                android:textColor="@color/colorBackGround"
+                                android:textColorHint="@color/colorBackGround"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.5"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/imgDateEnd"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/calendar" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lnlTimeZonePoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:id="@+id/txtTimeZoneUTC"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2"
+                        android:paddingTop="25dp"
+                        android:text=""
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/newshape"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:id="@+id/lnlDateStartUTC"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/txtCreateDateStartUTC"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Day Start"
+                                android:textColor="@color/colorBackGround"
+                                android:textColorHint="@color/colorBackGround"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnlTimeStartUTC"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/txtCreateTimeStartUTC"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorBackGround"
+                                android:textColorHint="@color/colorBackGround"
+                                android:text="Time Start"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.5"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/imDateGoUTC"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/calendar" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/newshape"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:id="@+id/lnlDateEndUTC"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/txtCreateDateEndUTC"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Day End"
+                                android:textColor="@color/colorBackGround"
+                                android:textColorHint="@color/colorBackGround"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnlTimeEndUTC"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/txtCreateTimeEndUTC"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Time End"
+                                android:textColor="@color/colorBackGround"
+                                android:textColorHint="@color/colorBackGround"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.5"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/imgDateEndUTC"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/calendar" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.managetrip.overviewtrip.TripViewUserFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:alpha="0.5"
+                        android:id="@+id/imgOverViewMap"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_marginRight="15dp"
+                        android:src="@mipmap/map" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_weight="8"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/imgTaskOverView"-->
+<!--                        android:layout_width="35dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginRight="15dp"-->
+<!--                        android:src="@mipmap/checklists"-->
+<!--                        android:tint="@color/colorBackGround"/>-->
+
+<!--                    <ImageView-->
+<!--                        android:alpha="0.5"-->
+<!--                        android:id="@+id/imgDocumentOverView"-->
+<!--                        android:layout_width="35dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginRight="15dp"-->
+<!--                        android:src="@mipmap/document" />-->
+
+<!--                    <ImageView-->
+<!--                        android:alpha="0.5"-->
+<!--                        android:id="@+id/imgAddTrip"-->
+<!--                        android:layout_width="30dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginRight="15dp"-->
+<!--                        android:src="@mipmap/addicon" />-->
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewTrip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp20" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/colorBackGround"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".feature.managetrip.edittrip.EditTripActivity">
+
+    <!--    <FrameLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_margin="10dp"-->
+    <!--        android:layout_weight="9"-->
+    <!--        android:background="@drawable/shaperecycleviewgrey"-->
+    <!--        android:baselineAligned="false">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginLeft="@dimen/dp10"-->
+    <!--            android:layout_marginRight="@dimen/dp10">-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_marginTop="5dp"-->
+    <!--                android:tint="@color/colorBackGround"-->
+    <!--                android:id="@+id/imgBackEditTrip"-->
+    <!--                android:layout_width="@dimen/dp30"-->
+    <!--                android:layout_height="@dimen/dp30"-->
+    <!--                android:layout_marginLeft="@dimen/dp10"-->
+    <!--                android:src="@drawable/iconback" />-->
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_marginTop="@dimen/dp10"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:layout_marginLeft="@dimen/dp10"-->
+    <!--            android:layout_marginRight="@dimen/dp10"-->
+    <!--            android:background="@drawable/shaperecycleviewgrey"-->
+    <!--            android:gravity="center"-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:padding="10dp">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:id="@+id/lnlEditTripDelete"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:gravity="right">-->
+
+    <!--                <ImageView-->
+    <!--                    android:tint="@color/colorBackGround"-->
+    <!--                    android:id="@+id/imgDeleteTrip"-->
+    <!--                    android:layout_width="@dimen/dp30"-->
+    <!--                    android:layout_height="@dimen/dp30"-->
+    <!--                    android:layout_marginTop="5dp"-->
+    <!--                    android:layout_marginRight="@dimen/dp10"-->
+    <!--                    android:src="@mipmap/delete" />-->
+    <!--            </LinearLayout>-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="Update City"-->
+    <!--                android:textColor="@color/colorBackGround"-->
+    <!--                android:textSize="22sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_gravity="center"-->
+    <!--                android:layout_marginTop="20dp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:orientation="vertical">-->
+
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="50dp"-->
+    <!--                    android:layout_marginTop="10dp">-->
+
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:background="@drawable/shapebutton"-->
+    <!--                        android:orientation="horizontal"-->
+    <!--                        android:weightSum="10">-->
+    <!--                        <ImageView-->
+    <!--                            android:layout_width="0dp"-->
+    <!--                            android:layout_height="20dp"-->
+    <!--                            android:layout_gravity="center"-->
+    <!--                            android:tint="@color/colorWhite"-->
+    <!--                            android:layout_weight="1"-->
+    <!--                            android:src="@mipmap/locationplace" />-->
+
+
+    <!--                        <com.google.android.material.textfield.TextInputEditText-->
+    <!--                            android:id="@+id/edtEditTripName"-->
+    <!--                            android:name="com.google.android.libraries.places.widget."-->
+    <!--                            android:layout_width="0dp"-->
+    <!--                            android:layout_height="match_parent"-->
+    <!--                            android:layout_weight="9"-->
+    <!--                            android:editable="false"-->
+    <!--                            android:textColor="@color/colorWhite"-->
+    <!--                            android:hint="Choose Place"-->
+    <!--                            android:imeOptions="actionSearch"-->
+    <!--                            android:inputType="text"-->
+    <!--                            android:backgroundTint="@color/colorBackGround"-->
+    <!--                            android:textColorHint="@color/colorWhite"-->
+    <!--                            android:textSize="15dp" />-->
+
+    <!--                    </LinearLayout>-->
+    <!--                </LinearLayout>-->
+
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_marginTop="@dimen/dp10"-->
+    <!--                    android:id="@+id/lnlSearchResult"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="180dp"-->
+    <!--                    android:background="@drawable/newshape"-->
+    <!--                    android:orientation="horizontal"-->
+    <!--                    android:weightSum="10">-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_margin="5dp"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:layout_weight="4">-->
+    <!--                        <androidx.cardview.widget.CardView-->
+    <!--                            app:cardCornerRadius="7dp"-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="match_parent">-->
+    <!--                            <ImageView-->
+    <!--                                android:background="@color/colorTedarari"-->
+    <!--                                android:id="@+id/imgTripImageUpdate"-->
+    <!--                                android:layout_width="match_parent"-->
+    <!--                                android:layout_height="match_parent"-->
+    <!--                                android:scaleType="fitXY" />-->
+    <!--                        </androidx.cardview.widget.CardView>-->
+
+
+    <!--                    </LinearLayout>-->
+
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_margin="5dp"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_weight="6"-->
+    <!--                        android:orientation="vertical"-->
+    <!--                        android:paddingLeft="20dp"-->
+    <!--                        android:paddingTop="20dp">-->
+
+    <!--                        <TextView-->
+    <!--                            android:id="@+id/txtPlaceTrip"-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="Phú Quốc"-->
+    <!--                            android:textColor="@color/colorBackGround"-->
+    <!--                            android:textSize="15sp"-->
+    <!--                            android:textStyle="bold" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:id="@+id/txtPlaceAddress"-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="Phú Quốc Việt Name"-->
+    <!--                            android:textColor="@color/colorBackGround"-->
+    <!--                            android:textSize="12sp" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:id="@+id/txtTimeTrip"-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text=""-->
+    <!--                            android:textColor="@color/colorBackGround"-->
+    <!--                            android:textSize="12sp" />-->
+
+    <!--                    </LinearLayout>-->
+
+
+    <!--                </LinearLayout>-->
+
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_marginTop="@dimen/dp10"-->
+    <!--                    android:id="@+id/lnlEditDateTripStart"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="@dimen/dp50"-->
+    <!--                    android:layout_gravity="center"-->
+    <!--                    android:background="@drawable/newshape"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:orientation="horizontal"-->
+    <!--                    android:weightSum="10">-->
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textEditDayStart"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:layout_weight="8.5"-->
+    <!--                        android:gravity="center"-->
+    <!--                        android:hint="Date Start"-->
+    <!--                        android:textColor="@color/colorBackGround"-->
+    <!--                        android:textColorHint="@color/colorBackGround"-->
+    <!--                        android:textStyle="bold" />-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_gravity="center"-->
+    <!--                        android:layout_weight="1.5"-->
+    <!--                        android:gravity="center">-->
+
+    <!--                        <ImageView-->
+    <!--                            android:id="@+id/imDateGo"-->
+    <!--                            android:layout_width="30dp"-->
+    <!--                            android:layout_height="30dp"-->
+    <!--                            android:background="@drawable/calendar" />-->
+    <!--                    </LinearLayout>-->
+    <!--                </LinearLayout>-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:id="@+id/lnlEditDateTripEnd"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="@dimen/dp50"-->
+    <!--                    android:layout_marginTop="5dp"-->
+    <!--                    android:background="@drawable/newshape"-->
+    <!--                    android:weightSum="10">-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/txtEditTripDateEnd"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:layout_weight="8.5"-->
+    <!--                        android:gravity="center"-->
+    <!--                        android:hint="Date End"-->
+    <!--                        android:textColor="@color/colorBackGround"-->
+    <!--                        android:textColorHint="@color/colorBackGround"-->
+    <!--                        android:textStyle="bold" />-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:layout_weight="1.5"-->
+    <!--                        android:gravity="center">-->
+
+    <!--                        <ImageView-->
+    <!--                            android:layout_width="30dp"-->
+    <!--                            android:layout_height="30dp"-->
+    <!--                            android:background="@drawable/calendar" />-->
+    <!--                    </LinearLayout>-->
+
+
+    <!--                </LinearLayout>-->
+
+    <!--&lt;!&ndash;                <LinearLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:layout_height="50dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:orientation="horizontal">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;                    <LinearLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:id="@+id/lnlEditDateTripStart"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:layout_height="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:gravity="center">&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;                        <TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:id="@+id/textEditDayStart"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:layout_height="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:background="@drawable/newshape"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:textSize="15sp" />&ndash;&gt;-->
+    <!--&lt;!&ndash;                    </LinearLayout>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;                </LinearLayout>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;                <LinearLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:layout_height="50dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:orientation="horizontal">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;                    <LinearLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:id="@+id/lnlEditDateTripEnd"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:layout_height="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:gravity="center">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;                        <TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:id="@+id/txtEditTripDateEnd"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:layout_height="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:background="@drawable/newshape"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:textSize="15sp" />&ndash;&gt;-->
+    <!--&lt;!&ndash;                    </LinearLayout>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;                </LinearLayout>&ndash;&gt;-->
+    <!--            </LinearLayout>-->
+
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/txtError"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="Lỗi"-->
+    <!--                android:textColor="@color/colorBlack"-->
+    <!--                android:visibility="gone" />-->
+
+
+    <!--            <Button-->
+    <!--                android:id="@+id/btnEditTripSubmit"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="50dp"-->
+    <!--                android:layout_marginTop="15dp"-->
+    <!--                android:background="@drawable/shapebutton"-->
+    <!--                android:text="Save"-->
+    <!--                android:textColor="@color/colorWhite" />-->
+
+    <!--        </LinearLayout>-->
+
+    <!--    </FrameLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorBackGround"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Update City"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="left|center">
+
+                    <ImageView
+                        android:id="@+id/imgBackEditTrip"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:src="@drawable/iconback" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="right|center">
+
+                    <ImageView
+                        android:id="@+id/imgUpdateCitySubmit"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/savebutton"
+                        android:tint="@color/colorWhite" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:background="@color/colorBackGround">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/dp20"
+                        android:paddingTop="7dp"
+                        android:text="Choose Place For This City"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shapebutton"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@mipmap/locationplace"
+                        android:tint="@color/colorWhite" />
+
+
+                    <EditText
+                        android:id="@+id/edtEditTripName"
+                        android:name="com.google.android.libraries.places.widget."
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="9"
+                        android:backgroundTint="@color/colorBackGround"
+                        android:editable="false"
+                        android:hint="Choose Place"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="@dimen/dp12" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnlSearchResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_weight="2.25"
+                    android:background="@drawable/newshape"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="4">
+
+                        <ImageView
+                            android:id="@+id/imgTripImageUpdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="6"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="20dp">
+
+                        <TextView
+                            android:id="@+id/txtPlaceTrip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phú Quốc"
+                            android:textColor="@color/colorBackGround"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtPlaceAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/colorBackGround"
+                            android:textSize="12sp" />
+
+
+                        <LinearLayout
+                            android:id="@+id/lnlEditTripDelete"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right">
+
+                            <ImageView
+                                android:id="@+id/imgDeleteTrip"
+                                android:layout_width="20dp"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="@dimen/dp10"
+                                android:src="@mipmap/delete"
+                                android:tint="@color/colorBackGround" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:id="@+id/txtTimeZone"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2"
+                        android:paddingTop="25dp"
+                        android:text="Time form City:"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/newshape"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:id="@+id/lnlEditDateTripStart"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/textEditDayStart"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Day Start"
+                                android:textColor="@color/colorBackGround"
+                                android:textColorHint="@color/colorBackGround"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnlEditTimeStart"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/txtEditTimeStart"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Time Start"
+                                android:textColor="@color/colorBackGround"
+                                android:textColorHint="@color/colorBackGround"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.5"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/imDateGo"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/calendar" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/newshape"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:id="@+id/lnlEditDateTripEnd"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/txtEditTripDateEnd"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Day End"
+                                android:textColor="@color/colorBackGround"
+                                android:textColorHint="@color/colorBackGround"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnlEditTimeEnd"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/txtEditTimeEnd"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Time End"
+                                android:textColor="@color/colorBackGround"
+                                android:textColorHint="@color/colorBackGround"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.5"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/imgDateEnd"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/calendar" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lnlTimeZonePoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:id="@+id/txtTimeZoneUTC"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2"
+                        android:paddingTop="25dp"
+                        android:text=""
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/newshape"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:id="@+id/lnlEditDateStartUTC"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/txtEditDateStartUTC"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Day Start"
+                                android:textColor="@color/colorBackGround"
+                                android:textColorHint="@color/colorBackGround"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnlEditTimeStartUTC"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/txtEditTimeStartUTC"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Time Start"
+                                android:textColor="@color/colorBackGround"
+                                android:textColorHint="@color/colorBackGround"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.5"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/imDateGoUTC"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/calendar" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/newshape"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:id="@+id/lnlDateEndUTC"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/txtEditDateEndUTC"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Day End"
+                                android:textColor="@color/colorBackGround"
+                                android:textColorHint="@color/colorBackGround"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnlEditTimeEndUTC"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/txtEditTimeEndUTC"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Time End"
+                                android:textColor="@color/colorBackGround"
+                                android:textColorHint="@color/colorBackGround"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.5"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/imgDateEndUTC"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/calendar" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <!--    <LinearLayout-->
+        <!--        android:id="@+id/lnlDivideMoney"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_margin="10dp"-->
+        <!--        android:weightSum="10">-->
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_weight="3">-->
+
+        <!--            <TextView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="Your Expense:"-->
+        <!--                android:textColor="@color/colorBackGround"-->
+        <!--                android:textStyle="bold" />-->
+        <!--        </LinearLayout>-->
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_weight="7">-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/txtYourExpense"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginLeft="5dp"-->
+        <!--                android:ellipsize="marquee"-->
+        <!--                android:marqueeRepeatLimit="marquee_forever"-->
+        <!--                android:scrollHorizontally="true"-->
+        <!--                android:singleLine="true"-->
+        <!--                android:textStyle="bold" />-->
+        <!--        </LinearLayout>-->
+        <!--    </LinearLayout>-->
+
+        <!--    <LinearLayout-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginLeft="10dp"-->
+        <!--        android:layout_marginRight="10dp"-->
+        <!--        android:weightSum="10">-->
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_weight="3">-->
+
+        <!--            <TextView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="Your Cash:"-->
+        <!--                android:textColor="@color/colorYellow"-->
+        <!--                android:textStyle="bold" />-->
+        <!--        </LinearLayout>-->
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_weight="7">-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/txtYourCash"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginRight="5dp"-->
+        <!--                android:ellipsize="marquee"-->
+        <!--                android:marqueeRepeatLimit="marquee_forever"-->
+        <!--                android:scrollHorizontally="true"-->
+        <!--                android:singleLine="true"-->
+        <!--                android:textStyle="bold" />-->
+        <!--        </LinearLayout>-->
+
+
+        <!--    </LinearLayout>-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvPayBackFlow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</ScrollView>

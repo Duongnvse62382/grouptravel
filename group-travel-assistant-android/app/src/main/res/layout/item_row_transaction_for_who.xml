@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lnlRowCheckBoxPaidBy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="10">
+
+    <CheckBox
+        android:id="@+id/cbMemberTransactionForWho"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/txtNameMemberTransactionForWho"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
+        android:text="Thiên"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <TextView
+        android:maxLines="1"
+        android:inputType="numberDecimal"
+        android:gravity="right"
+        android:text="0"
+        android:textSize="15sp"
+        android:textColorHint="@color/colorBlack"
+        android:textColor="@color/colorBlack"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtMoneyForEachMember"
+        android:layout_marginRight="15dp"
+        />
+</LinearLayout>

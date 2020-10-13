@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/newshape"
+    android:id="@+id/lnlRowTransactionDetails"
+    android:weightSum="10">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:layout_gravity="left"
+        >
+        <TextView
+            android:textColor="@color/colorBackGround"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTransactioMembernName"
+            android:text="Taxi"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:layout_gravity="right"
+        android:gravity="right">
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:text="200.000 đ"
+            android:id="@+id/txtTransactionDetailsValue"
+            android:textColor="@color/colorBackGround"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+</LinearLayout>

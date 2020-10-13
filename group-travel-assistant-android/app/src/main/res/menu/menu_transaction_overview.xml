@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_Sort"
+        android:title="@string/sort_by"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/subMenuSortByAmount"
+                android:title="@string/amount" />
+            <item
+                android:id="@+id/subMenuSortByDate"
+                android:title="@string/date" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_mode"
+        android:title="@string/personal_mode"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/subMenuCalculationDetails"
+                android:title="@string/show_detailed_calculations" />
+            <item
+                android:id="@+id/subMenuMyExpense"
+                android:title="" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_statisic"
+        android:title="@string/statistic"
+        app:showAsAction="never">
+    </item>
+
+</menu>

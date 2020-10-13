@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="@dimen/dp10"
+    android:layout_marginRight="@dimen/dp10"
+    android:layout_marginTop="15dp"
+    android:orientation="vertical"
+    android:id="@+id/lnlRowSuggestActivityItem">
+<LinearLayout
+    android:layout_marginLeft="20dp"
+    android:background="@drawable/shaperecycleviewday"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/txtSuggestName"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_width="@dimen/dp60"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:scrollHorizontally="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit ="marquee_forever"/>
+    <ImageView
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="5dp"
+        android:src="@mipmap/categorywhite"
+        android:layout_marginLeft="@dimen/dp10"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_width="@dimen/dp20"
+        android:layout_height="@dimen/dp20" />
+    <TextView
+        android:id="@+id/txtType"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:background="@drawable/shapenopading"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="10"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_width="0dp"
+        android:layout_weight="8.5"
+        android:layout_marginLeft="5dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4.5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/txtStartPlace"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="5"
+                        android:text="Hồ Chí Minh"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13dp"
+                        android:textStyle="bold"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:singleLine="true"
+                        android:scrollHorizontally="true"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit ="marquee_forever"/>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/lnlNext"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp20">
+                    <ImageView
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:src="@mipmap/next"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnlPlaceEndSuggested"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4.5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/txtEndtPlace"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="Hồ Chí Minh"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13dp"
+                        android:textStyle="bold"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:singleLine="true"
+                        android:scrollHorizontally="true"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit ="marquee_forever"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_weight="4.5"
+                android:id="@+id/cvImgPlaceStart"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="5dp"
+                app:cardCornerRadius="@dimen/dp10">
+
+                <ImageView
+                    android:id="@+id/imgSuggestedPlaceStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:textColor="@color/colorSecondary" />
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvImgPlaceEnd"
+                android:layout_weight="4.5"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="5dp"
+                app:cardCornerRadius="@dimen/dp10">
+
+                <ImageView
+                    android:id="@+id/imgSuggestedPlaceEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:textColor="@color/colorSecondary" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txtIsTooFar"
+            android:layout_gravity="center"
+            android:text="Is Too Far"
+            android:textStyle="bold"
+            android:textColor="@color/colorYellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp10"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_width="0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5">
+        <ImageView
+            android:id="@+id/imgEditSuggested"
+            android:src="@mipmap/edit"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:textSize="10sp"
+            android:text="Sửa"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:backgroundTint="@color/colorSecondary"
+            android:textColor="@color/colorWhite"/>
+        <ImageView
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp20"
+            android:id="@+id/imgDeleteSuggested"
+            android:src="@drawable/deleteall"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:textSize="10sp"
+            android:layout_gravity="center"
+            android:text="Sửa"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:backgroundTint="@color/colorSecondary"
+            android:textColor="@color/colorWhite"/>
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/txtNumberVote"
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/imgLikeSuggestedActivity"
+            android:src="@mipmap/unlike"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:textSize="10sp"
+            android:text="Sửa"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:backgroundTint="@color/colorSecondary"
+            android:textColor="@color/colorWhite"/>
+        <ImageView
+            android:id="@+id/imgUnLikeSuggestedActivity"
+            android:src="@mipmap/like"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:textSize="10sp"
+            android:text="Sửa"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:backgroundTint="@color/colorSecondary"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+</LinearLayout>

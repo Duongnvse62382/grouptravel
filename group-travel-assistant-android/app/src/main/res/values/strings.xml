@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Group Travel Assistant</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_group_manage">GroupManageActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="action_search">Search</string>
+    <string name="map_key" translatable="false">AIzaSyA8uroGt-6W8-JpIovVyzQoz_a8g56j2xQ</string>
+    <string name="channel_name">Activity StartTime</string>
+    <string name="channel_description">description </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="low_storage_error">Ocr dependencies cannot be downloaded due to low device storage</string>
+    <string name="title_activity_main">Ocr Detector Sample</string>
+    <string name="ocr_header">Click &quot;Detect Text&quot; to detect text</string>
+    <string name="read_text">Detect Text</string>
+    <string name="auto_focus">Auto Focus</string>
+    <string name="use_flash">Use Flash</string>
+    <string name="personal_mode">Personal Mode</string>
+    <string name="statistic">Statistic</string>
+    <string name="sort_by">Sort By</string>
+    <string name="amount">Amount</string>
+    <string name="date">Date</string>
+    <string name="show_my_expenses_only">Show my expenses only</string>
+    <string name="show_detailed_calculations">Show detailed calculations</string>
+    <string name="ocr_success">Text read successfully</string>
+    <string name="ocr_failure">No text captured</string>
+    <string name="ocr_error">"Error reading text: %1$s"</string>
+    <string name="title_activity_budget_details">BudgetDetailsActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+</resources>

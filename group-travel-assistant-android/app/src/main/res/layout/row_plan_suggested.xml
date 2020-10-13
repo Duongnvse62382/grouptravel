@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lnlRowActivityOfDay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginRight="@dimen/dp20"
+                android:layout_gravity="right"
+                android:id="@+id/txtIsplanSuggested"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/colorBackGround"
+                android:text=""/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10"
+                android:background="@drawable/shaperecycleviewwhite"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_weight="10"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp100"
+                            android:layout_margin="5dp"
+                            android:layout_weight="3"
+                            android:background="@color/colorBackGround"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="7"
+                                app:cardCornerRadius="2dp">
+
+                                <ImageView
+                                    android:id="@+id/imgPlaceStartActivity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txtActivityTimeStart"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="3"
+                                android:background="@color/colorBackGround"
+                                android:gravity="center"
+                                android:text="11:00"
+                                android:textColor="@color/colorWhite" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="7">
+
+                            <TextView
+                            android:id="@+id/txtAcitivityStartPlaceName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="cdscccsdcsd"
+                            android:textColor="@color/colorBackGround" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlNamePlaceEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@mipmap/down" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlImgPlaceEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="5dp"
+                            android:layout_weight="3"
+                            android:background="@color/colorBackGround"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="7"
+                                app:cardCornerRadius="2dp">
+
+                                <ImageView
+                                    android:id="@+id/imgPlaceEndActivity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txtTimeActivityEnd"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="3"
+                                android:background="@color/colorBackGround"
+                                android:gravity="center"
+                                android:text="11:00"
+                                android:textColor="@color/colorWhite" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="7">
+
+                            <TextView
+                                android:id="@+id/txtAcitivityEndPlaceName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="cdscccsdcsd"
+                                android:textColor="@color/colorBackGround" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

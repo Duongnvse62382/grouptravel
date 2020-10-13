@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.managetrip.map.MapActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorBackGround"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/txtNameGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Directions Overview"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="left|center">
+
+                <ImageView
+                    android:id="@+id/imgMapBack"
+                    android:layout_width="23dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/iconback" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9">
+        <fragment
+            android:id="@+id/google_map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="@color/colorWhite"-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:layout_alignParentBottom="true"-->
+    <!--            android:padding="10dp">-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="Polyline Width"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <SeekBar-->
+    <!--                android:id="@+id/seek_width"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="5dp"-->
+    <!--                android:max="20"-->
+    <!--                android:progress="3"-->
+    <!--                android:thumbTint="@color/colorBackGround" />-->
+
+    <!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_marginTop="10dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:text="Polyline Color"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:textStyle="bold" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            <SeekBar&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:id="@+id/seek_red"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_marginTop="5dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:max="20"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:progress="3"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:progressTint="#FF0000"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:thumbTint="#FF0000" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            <SeekBar&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:id="@+id/seek_primary"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_marginTop="5dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:max="20"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:progress="3"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:progressTint="@color/colorPrimary"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:thumbTint="@color/colorPrimary" />&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;            <SeekBar&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:id="@+id/seek_green"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_marginTop="5dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:max="20"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:progress="3"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:progressTint="@color/colorBackGround"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:thumbTint="@color/colorBackGround" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_marginTop="10dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:orientation="horizontal"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:weightSum="2">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;                <Button&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:id="@+id/bt_draw"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:layout_width="0dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:layout_weight="1.5"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:text="draw_polyline" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;                <Button&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:id="@+id/bt_clear"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:layout_width="0dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:layout_weight="0.5"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:text="clear" />&ndash;&gt;-->
+    <!--&lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+    <!--        </LinearLayout>-->
+
+
+</LinearLayout>

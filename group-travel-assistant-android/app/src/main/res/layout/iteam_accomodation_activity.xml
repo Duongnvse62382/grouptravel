@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lnlRowAccomodationOfDay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boder_button">
+
+                <TextView
+                    android:id="@+id/txtNameActivityAccomodation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginRight="@dimen/dp20"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:ellipsize="marquee"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="Hồ Chí Minh - Phú Quốc"
+                    android:textColor="@color/colorBackGround"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10"
+                android:background="@drawable/shaperecycleviewwhite"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8.5"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:id="@+id/txtAccomodationStartPlaceName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:focusableInTouchMode="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="cdscccsdcsd"
+                            android:textColor="@color/colorBackGround"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center|left"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:id="@+id/txtAccomodationDayStart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="22-7-2020"
+                            android:textColor="@color/colorBackGround"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:id="@+id/lnlDayNext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp10">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@mipmap/next" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txtDayAccomodationEnd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="22-7-2020"
+                            android:textColor="@color/colorBackGround"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <ImageView
+                            android:id="@+id/imgAccomodationPlace"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp150"
+                            android:padding="5dp"
+                            android:src="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtIsTooFar"
+                        android:layout_gravity="center"
+                        android:text="Is Too Far"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorYellow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lnlEditAccomodation"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1.5">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgDeleteAccomodation"
+                            android:layout_width="@dimen/dp50"
+                            android:layout_height="25dp"
+                            android:layout_gravity="top|center|right"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="15dp"
+                            android:src="@mipmap/deleteactivity" />
+
+                        <ImageView
+                            android:id="@+id/imgEditAccomodation"
+                            android:layout_width="@dimen/dp50"
+                            android:layout_height="@dimen/dp20"
+                            android:layout_gravity="bottom|center|right"
+                            android:layout_marginBottom="5dp"
+                            android:src="@mipmap/edit" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnlPrintTodolist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtTodolist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="To do list"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="@dimen/dp12" />
+
+                    <ImageView
+                        android:id="@+id/imgUp"
+                        android:layout_width="@dimen/dp50"
+                        android:layout_height="18dp"
+                        android:layout_gravity="right"
+                        android:src="@mipmap/downtodo" />
+
+                    <ImageView
+                        android:id="@+id/imgDown"
+                        android:layout_width="@dimen/dp50"
+                        android:layout_height="18dp"
+                        android:layout_gravity="right"
+                        android:src="@mipmap/up" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcvTaskInActivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/shaperecycleviewwhite">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

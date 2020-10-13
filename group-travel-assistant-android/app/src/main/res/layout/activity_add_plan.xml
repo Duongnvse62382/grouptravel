@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.manageplan.plandetails.PlanDetailsActivity">
+    <LinearLayout
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:background="@color/colorBackGround"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Plan Details"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    />
+
+                <LinearLayout
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="left|center"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgAddPlanBack"
+                        android:layout_width="23dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/iconback" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:weightSum="10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <com.ogaclejapan.smarttablayout.SmartTabLayout
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:id="@+id/view_pager_tab_activity"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    app:stl_defaultTabTextAllCaps="true"
+                    app:stl_defaultTabTextColor="@color/colorBlack"
+                    app:stl_defaultTabTextHorizontalPadding="@dimen/dp16"
+                    app:stl_defaultTabTextMinWidth="0dp"
+                    app:stl_defaultTabTextSize="@dimen/sp10"
+                    app:stl_distributeEvenly="true"
+                    app:stl_dividerThickness="0dp"
+                    app:stl_drawDecorationAfterTab="false"
+                    app:stl_indicatorAlwaysInCenter="false"
+                    app:stl_indicatorGravity="center"
+                    app:stl_indicatorInFront="true"
+                    app:stl_indicatorInterpolation="smart"
+                    app:stl_indicatorThickness="0dp"
+                    app:stl_indicatorWithoutPadding="false"
+                    app:stl_underlineThickness="0dp">
+
+                </com.ogaclejapan.smarttablayout.SmartTabLayout>
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/viewpagerActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

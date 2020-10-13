@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackGround"
+    tools:context=".feature.managetrip.overviewtrip.TripOverviewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorBackGround"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="@dimen/dp50"
+                    android:id="@+id/txtNameGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Tên Nhóm"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:ellipsize="marquee"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="left|center">
+
+                    <ImageView
+                        android:id="@+id/imgBack"
+                        android:layout_width="23dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/iconback" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:gravity="right|center">
+
+                    <ImageView
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:id="@+id/imgMakePending"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@mipmap/pending" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="1dp"
+            android:layout_weight="7.5"
+            android:background="@color/colorBackGround">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shapenopading"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+
+                <com.ogaclejapan.smarttablayout.SmartTabLayout
+                    android:id="@+id/view_pager_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@color/colorWhite"
+                    app:stl_defaultTabTextAllCaps="true"
+                    app:stl_defaultTabTextColor="@color/colorBlack"
+                    app:stl_defaultTabTextHorizontalPadding="@dimen/dp16"
+                    app:stl_defaultTabTextMinWidth="0dp"
+                    app:stl_defaultTabTextSize="@dimen/sp10"
+                    app:stl_distributeEvenly="true"
+                    app:stl_dividerThickness="0dp"
+                    app:stl_drawDecorationAfterTab="false"
+                    app:stl_indicatorAlwaysInCenter="false"
+                    app:stl_indicatorGravity="center"
+                    app:stl_indicatorInFront="true"
+                    app:stl_indicatorInterpolation="smart"
+                    app:stl_indicatorThickness="0dp"
+                    app:stl_indicatorWithoutPadding="false"
+                    app:stl_underlineThickness="0dp">
+
+                </com.ogaclejapan.smarttablayout.SmartTabLayout>
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="10"
+                    android:background="@color/colorTedarari"
+                    android:paddingTop="10dp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/shaperowrecycleview"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/txtMemberNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:alpha="0.5"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:text="Members:"
+                    android:textColor="@color/colorBackGround"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgAddMember"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:src="@mipmap/addicon" />
+
+                <ru.nikartm.support.ImageBadgeView
+                    android:id="@+id/imgChatGroup"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:ibv_badgeValue="0"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:padding="4dp"
+                    android:tint="@color/colorBackGround"
+                    app:ibv_badgeTextSize="12sp"
+                    app:ibv_fixedBadgeRadius="10dp"
+                    app:ibv_badgeTextStyle="bold"
+                    app:ibv_badgeTextColor="@color/colorRed"
+                    app:ibv_badgeColor="@color/colorWhite"
+                    app:ibv_badgeLimitValue="false"
+                    android:src="@drawable/chatg" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleViewMember"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginRight="@dimen/dp10">
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

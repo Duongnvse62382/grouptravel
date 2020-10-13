@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "234647527494",
+    "firebase_url": "https://group-travel-assistant.firebaseio.com",
+    "project_id": "group-travel-assistant",
+    "storage_bucket": "group-travel-assistant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234647527494:android:bb1076aecafb5470136a47",
+        "android_client_info": {
+          "package_name": "com.fpt.gta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234647527494-rq9umiv2eukvukltp5fcaoap3nsd558b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fpt.gta",
+            "certificate_hash": "e7edbb3bbf82c87b357210034aa545b11f66c605"
+          }
+        },
+        {
+          "client_id": "234647527494-e8mhs7vj31e1igva4ljpd8aq31cc0ed1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fpt.gta",
+            "certificate_hash": "1cd423ef387947381ac9f5517236fa682c488ddd"
+          }
+        },
+        {
+          "client_id": "234647527494-47oj9rm487rei03901r60qt4t77kk82u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fpt.gta",
+            "certificate_hash": "45c609e9d1217b1cef33dbc2613c54b2bbc57c37"
+          }
+        },
+        {
+          "client_id": "234647527494-37dnucmq2ql15bfskp1usuaah7asr3ss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq4xLYDhHlpQTaM0nHNCQ6Auvxk_Kqwy8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234647527494-37dnucmq2ql15bfskp1usuaah7asr3ss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

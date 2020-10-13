@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp">
+        <shape android:shape="oval">
+            <size
+                android:width="26dp"
+                android:height="26dp" />
+            <solid android:color="@color/colorWhite" />
+        </shape>
+    </item>
+    <item
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp"
+        android:drawable="@drawable/ic_check_white"
+        android:width="26dp"
+        android:height="26dp"></item>
+</layer-list>

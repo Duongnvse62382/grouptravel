@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:background="@drawable/shapercvdaywhite"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBackGround"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter Member"/>
+
+    <LinearLayout
+        android:id="@+id/lnlChooseAllPlan"
+        android:layout_marginRight="@dimen/dp16"
+        android:layout_marginLeft="@dimen/dp16"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp20">
+        <ImageView
+
+            android:id="@+id/imgAllPlan"
+            android:src="@mipmap/name"
+            android:layout_width="20dp"
+            android:layout_height="@dimen/dp20" />
+        <TextView
+            android:layout_marginLeft="@dimen/dp10"
+            android:textColor="@color/colorBackGround"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Choose All Plan"/>
+
+    </LinearLayout>
+
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rcvDialogMember">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</ScrollView>
+
+</LinearLayout>

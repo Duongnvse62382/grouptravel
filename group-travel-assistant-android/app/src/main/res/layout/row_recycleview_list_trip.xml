@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lnlRowTripItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                app:cardCornerRadius="5dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:background="@color/colorTedarari"
+                    android:id="@+id/imgImageTrip"
+                    android:scaleType="matrix"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@drawable/shaperecycleviewwhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="9"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp">
+
+                    <TextView
+                        android:id="@+id/txtTripName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Đà Lạt"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/txtDayOfTrip"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="3 day for trip"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp">
+
+                    <TextView
+                        android:id="@+id/txtTripDateStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20/05/2020"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/dp10"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="@dimen/dp10"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:src="@mipmap/next" />
+
+                    <TextView
+                        android:id="@+id/txtTripDateEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="01/06/2020"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/dp10"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnlTimeZonePoint"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp">
+
+                    <TextView
+                        android:id="@+id/txtTripDateStartUTC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20/05/2020"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="7dp"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:src="@mipmap/next" />
+
+                    <TextView
+                        android:id="@+id/txtTripDateEndUTC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="01/06/2020"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="7dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lnl_edit_trip"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/colorSecondary"
+                    android:gravity="center"
+                    android:src="@mipmap/edit"
+                    android:text="Sửa"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="10sp"
+
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
